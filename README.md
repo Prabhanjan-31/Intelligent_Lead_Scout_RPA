@@ -24,7 +24,7 @@ The project is modularized into several specific sequences to ensure clean data 
 
 To objectively rank the extracted businesses, `ScrapeDetails.xaml` applies a weighted logarithmic formula to balance the raw star rating against the total volume of reviews.
 
-$Leadscore = Round((Rating * 0.7) + (log_{10}(Reviews + 1) * 0.3), 2)$
+$Leadscore = Round((Rating * 0.7) + (\log_{10}(Reviews + 1) * 0.3), 2)$
 
 * **Rating Weight (70%):** Prioritizes the actual customer satisfaction score.
 * **Review Volume Weight (30%):** Applies a Base-10 logarithm to the review count. This provides a credibility bonus to businesses with high interaction volumes while preventing extreme review counts from disproportionately dominating the score.
